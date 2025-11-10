@@ -14,7 +14,7 @@
       <h1>Masuk</h1>
       <p class="lead">Silakan masuk untuk mulai belajar huruf Jepang.</p>
       <input type="text" id="login-username" placeholder="Nama pengguna" />
-      <input type="password" id="login-password" placeholder="Kata sandi" />
+      <input type="password" id="login-password" placeholder="Kata sandi (atau kode pembuat)" />
       <div class="menu">
         <button class="btn primary" id="btn-login">Masuk</button>
         <button class="btn" id="btn-to-signup">Daftar</button>
@@ -38,17 +38,32 @@
     <!-- PAGE MENU -->
     <div id="menu-page" class="page">
       <h1>Belajar Huruf Jepang</h1>
-      <p class="lead">Halo, <span id="username-display"></span>!</p>
+      <p class="lead">Halo, <span id="username-display"></span>! <span id="creator-badge" class="small" style="display:none">(Creator)</span></p>
       <div class="menu">
         <button class="btn primary" id="btn-hiragana">Hiragana</button>
         <button class="btn" id="btn-katakana">Katakana</button>
       </div>
+
       <div class="leaderboard">
         <h2>Peringkat</h2>
         <div id="leaderboard-list"></div>
         <p class="small" id="user-count"></p>
       </div>
-      <button class="btn small mt" id="btn-logout">Keluar</button>
+
+      <div class="buttons">
+        <button class="btn small mt" id="btn-manage-users" style="display:none">Kelola Pengguna</button>
+        <button class="btn small mt" id="btn-logout">Keluar</button>
+      </div>
+    </div>
+
+    <!-- PAGE MANAGE USERS (ADMIN) -->
+    <div id="manage-page" class="page">
+      <h1>Kelola Pengguna</h1>
+      <p class="lead">Daftar pengguna terdaftar — kamu dapat banned / unbanned akun dari sini.</p>
+      <div id="manage-list" class="leaderboard"></div>
+      <div class="buttons">
+        <button class="btn" id="btn-manage-back">Kembali</button>
+      </div>
     </div>
 
     <!-- PAGE QUIZ -->
