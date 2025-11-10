@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Belajar Huruf Jepang — Hiragana & Katakana</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap card">
+
+    <!-- PAGE LOGIN -->
+    <div id="login-page" class="page active">
+      <h1>Masuk</h1>
+      <p class="lead">Silakan masuk untuk mulai belajar huruf Jepang.</p>
+      <input type="text" id="login-username" placeholder="Nama pengguna" />
+      <input type="password" id="login-password" placeholder="Kata sandi" />
+      <div class="menu">
+        <button class="btn primary" id="btn-login">Masuk</button>
+        <button class="btn" id="btn-to-signup">Daftar</button>
+      </div>
+      <p class="small muted" id="login-msg"></p>
+    </div>
+
+    <!-- PAGE SIGNUP -->
+    <div id="signup-page" class="page">
+      <h1>Daftar</h1>
+      <p class="lead">Buat akun untuk mulai belajar.</p>
+      <input type="text" id="signup-username" placeholder="Nama pengguna baru" />
+      <input type="password" id="signup-password" placeholder="Kata sandi" />
+      <div class="menu">
+        <button class="btn primary" id="btn-signup">Daftar</button>
+        <button class="btn" id="btn-to-login">Kembali</button>
+      </div>
+      <p class="small muted" id="signup-msg"></p>
+    </div>
+
+    <!-- PAGE MENU -->
+    <div id="menu-page" class="page">
+      <h1>Belajar Huruf Jepang</h1>
+      <p class="lead">Halo, <span id="username-display"></span>!</p>
+      <div class="menu">
+        <button class="btn primary" id="btn-hiragana">Hiragana</button>
+        <button class="btn" id="btn-katakana">Katakana</button>
+      </div>
+      <div class="leaderboard">
+        <h2>Peringkat</h2>
+        <div id="leaderboard-list"></div>
+        <p class="small" id="user-count"></p>
+      </div>
+      <button class="btn small mt" id="btn-logout">Keluar</button>
+    </div>
+
+    <!-- PAGE QUIZ -->
+    <div id="quiz-page" class="page">
+      <div class="top-bar">
+        <button class="btn small" id="btn-back-menu">← Menu</button>
+        <div class="small">Soal <span id="q-index">0</span></div>
+      </div>
+      <h1><span id="set-name">Kuis</span></h1>
+      <div class="question-area">
+        <div class="big-char" id="char">—</div>
+        <div class="options" id="options"></div>
+      </div>
+    </div>
+
+    <!-- PAGE RESULT -->
+    <div id="result-page" class="page">
+      <h1>Hasil Akhir</h1>
+      <div id="result-area"></div>
+      <div class="buttons">
+        <button class="btn primary" id="btn-retry">Ulangi Kuis</button>
+        <button class="btn" id="btn-menu">Kembali ke Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
